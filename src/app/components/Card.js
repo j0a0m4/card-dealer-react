@@ -1,15 +1,8 @@
 import React from 'react';
 import '../../styles/Card.css';
 
-function Card({ image, value, suit, transform }) {
-  return (
-    <img
-      style={{ transform }}
-      className="Card"
-      src={image}
-      alt={`${value} of ${suit} card`}
-    />
-  );
+function Card({ image, transform, alt }) {
+  return <img style={{ transform }} className="Card" src={image} alt={alt} />;
 }
 
 export default Card;

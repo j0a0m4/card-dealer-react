@@ -40,6 +40,7 @@ class DeckOfCards extends Component {
   }
 
   createCards({ image, value, suit, code, _transform }) {
+    const alt = `${value.toLowerCase()} of ${suit.toLowerCase()} card`;
     return (
       <Card
         transform={_transform}
@@ -47,6 +48,7 @@ class DeckOfCards extends Component {
         image={image}
         value={value}
         suit={suit}
+        alt={alt}
       />
     );
   }
