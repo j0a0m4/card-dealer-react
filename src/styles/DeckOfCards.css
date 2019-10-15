@@ -3,6 +3,22 @@
 }
 
 .DeckOfCards .title {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-size: 2rem;
   color: azure;
   letter-spacing: 4px;
+}
+
+.DeckOfCards .subtitle {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 0.75rem;
+}
+
+.DeckOfCards .remaining {
+  margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0;
+  font-size: 1rem;
 }

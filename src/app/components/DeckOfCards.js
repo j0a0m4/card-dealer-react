@@ -75,7 +75,9 @@ class DeckOfCards extends Component {
           A little demo made with {atomEmoji}React
         </h2>
         <DealCard deck={this.state.deck} dealCard={this.dealCard} />
-        <h4>{this.state.deck && this.state.deck.remaining} cards left</h4>
+        <h4 className="remaining">
+          {this.state.deck && this.state.deck.remaining} cards left
+        </h4>
         <div className="card-area">{pileOfCards}</div>
       </div>
     );
