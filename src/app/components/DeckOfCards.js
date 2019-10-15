@@ -29,7 +29,7 @@ class DeckOfCards extends Component {
     let card = await dealNewCard(this.state.deck);
     const newCard = card.cards[0];
     const remaining = card.remaining;
-    newCard.translate = deckTransform();
+    newCard._transform = deckTransform();
 
     this.setState(st => {
       return {
@@ -39,10 +39,10 @@ class DeckOfCards extends Component {
     });
   }
 
-  createCards({ image, value, suit, code, translate }) {
+  createCards({ image, value, suit, code, _transform }) {
     return (
       <Card
-        translate={translate}
+        transform={_transform}
         key={code}
         image={image}
         value={value}
