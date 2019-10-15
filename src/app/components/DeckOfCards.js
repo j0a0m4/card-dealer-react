@@ -4,6 +4,7 @@ import getNewDeck from '../utils/getNewDeck';
 import dealNewCard from '../utils/dealNewCard';
 import deckTransform from '../utils/deckTransform';
 import Card from './Card';
+import '../../styles/DeckOfCards.css';
 
 class DeckOfCards extends Component {
   constructor(props) {
@@ -40,7 +41,7 @@ class DeckOfCards extends Component {
   }
 
   createCards({ image, value, suit, code, _transform }) {
-    const alt = `${value.toLowerCase()} of ${suit.toLowerCase()} card`;
+    const alt = `${value.toLowerCase} of ${suit.toLowerCase()} card`;
     return (
       <Card
         transform={_transform}
@@ -59,12 +60,20 @@ class DeckOfCards extends Component {
         ♣️
       </span>
     );
+    const atomEmoji = (
+      <span role="img" aria-label="Atom Symbol">
+        ⚛️
+      </span>
+    );
     const pileOfCards = this.state.drawn.map(this.createCards);
     return (
       <div className="DeckOfCards">
-        <h1>
+        <h1 className="title">
           {clubEmoji} Card Dealer {clubEmoji}
         </h1>
+        <h2 className="title subtitle">
+          A little demo made with {atomEmoji}React
+        </h2>
         <DealCard deck={this.state.deck} dealCard={this.dealCard} />
         <h4>{this.state.deck && this.state.deck.remaining} cards left</h4>
         <div className="card-area">{pileOfCards}</div>

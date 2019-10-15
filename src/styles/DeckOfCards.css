@@ -1,0 +1,8 @@
+.DeckOfCards {
+  font-family: 'Slabo 27px', serif;
+}
+
+.DeckOfCards .title {
+  color: azure;
+  letter-spacing: 4px;
+}
